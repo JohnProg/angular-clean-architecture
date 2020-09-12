@@ -1,0 +1,9 @@
+<p>List:</p>
+<ng-template #loading>Loading...</ng-template>
+<div *ngIf="items$ | async as items; else loading">
+  <ng-container *ngIf="items.length; else noItems">
+    <div *ngFor="let item of items">{{ item.name }}</div>
+  </ng-container>
+  <ng-template #noItems>No Items!</ng-template>
+</div>
+<ng-template #loading>loading animation...</ng-template>
