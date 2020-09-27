@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
-import { AccountRepository } from '../../domain/repositories/account.repository';
 import { SignUpRequest, SignInRequest } from '../../domain/vo/request';
 import { Observable } from 'rxjs';
 import { User } from '../../domain/entities/user';
 import { AccountRemoteDataSource } from '../datasources/account-remote.data-source.service';
+import { AccountRepository } from '../../domain/repositories/account.repository';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class AccountRepositoryImpl implements AccountRepository {
   constructor(private remoteDataSource: AccountRemoteDataSource) {}
 

@@ -5,9 +5,7 @@ import { User } from '../entities/user';
 import { SignUpRequest } from '../vo/request/sign-up';
 import { AccountRepository } from '../repositories/account.repository';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class SignUpUseCase implements Usecase<User, SignUpRequest> {
   constructor(private repository: AccountRepository) {}
   execute(params: SignUpRequest): Observable<User> {

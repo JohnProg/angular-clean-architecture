@@ -7,9 +7,7 @@ export abstract class OrderRemoteDataSource {
   abstract fetchOrders(): Observable<OrderModel[]>;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class OrderRemoteDataSourceImpl implements OrderRemoteDataSource {
   constructor(private client: HttpClient) {}
 

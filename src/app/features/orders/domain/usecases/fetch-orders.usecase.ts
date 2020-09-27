@@ -4,9 +4,7 @@ import { Usecase } from 'src/app/core/usecases/usecase';
 import { OrderRepository } from '../repositories/order.repository';
 import { Order } from '../entities/order';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class FetchOrdersUseCase implements Usecase<Order[], void> {
   constructor(private repository: OrderRepository) {}
 

@@ -1,9 +1,15 @@
+import { OrderRepositoryImpl } from './repositories/order.repository.impl';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  OrderRemoteDataSource,
+  OrderRemoteDataSourceImpl,
+} from './datasources/order-remote.data-source.service';
+import { OrderRepository } from '../domain/repositories/order.repository';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, HttpClientModule],
+  providers: [
+    { provide: OrderRemoteDataSource, useClass: OrderRemoteDataSourceImpl },
+    { provide: OrderRepository, useClass: OrderRepositoryImpl },
+  ],
 })
 export class DataModule {}

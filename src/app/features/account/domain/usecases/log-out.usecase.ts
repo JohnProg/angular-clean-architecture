@@ -3,9 +3,7 @@ import { Observable } from 'rxjs';
 import { Usecase } from 'src/app/core/usecases/usecase';
 import { AccountRepository } from '../repositories/account.repository';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class LogOutUseCase implements Usecase<boolean, void> {
   constructor(private repository: AccountRepository) {}
 

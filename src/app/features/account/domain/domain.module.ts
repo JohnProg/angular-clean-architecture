@@ -1,10 +1,11 @@
-import { DataModule } from './../data/data.module';
+import { LogOutUseCase } from './usecases/log-out.usecase';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CoreModule } from '../../../core/core.module';
+import { SignInUseCase } from './usecases/sign-in.usecase';
+import { SignUpUseCase } from './usecases/sign-up.usecase';
+import { DataModule } from '../data/data.module';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, CoreModule],
+  imports: [DataModule],
+  providers: [SignInUseCase, SignUpUseCase, LogOutUseCase],
 })
 export class DomainModule {}

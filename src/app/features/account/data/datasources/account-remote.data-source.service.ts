@@ -9,9 +9,7 @@ export abstract class AccountRemoteDataSource {
   abstract logOut(): Observable<boolean>;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class AccountRemoteDataSourceImpl implements AccountRemoteDataSource {
   constructor(private client: HttpClient) {}
 

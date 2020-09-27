@@ -4,9 +4,7 @@ import { Order } from '../../domain/entities/order';
 import { OrderRemoteDataSource } from '../datasources/order-remote.data-source.service';
 import { OrderRepository } from '../../domain/repositories/order.repository';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class OrderRepositoryImpl implements OrderRepository {
   constructor(private remoteDataSource: OrderRemoteDataSource) {}
 

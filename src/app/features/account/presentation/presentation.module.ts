@@ -1,3 +1,4 @@
+import { DomainModule } from './../domain/domain.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RoutingModule } from './routing.module';
@@ -8,6 +9,6 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 
 @NgModule({
   declarations: [SignInComponent, SignUpComponent, ForgotPasswordComponent],
-  imports: [CommonModule, RoutingModule, ReactiveFormsModule],
+  imports: [CommonModule, RoutingModule, DomainModule, ReactiveFormsModule],
 })
 export class PresentationModule {}

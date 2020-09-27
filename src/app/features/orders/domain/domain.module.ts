@@ -1,10 +1,9 @@
 import { DataModule } from './../data/data.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { CoreModule } from '../../../core/core.module';
+import { FetchOrdersUseCase } from './usecases/fetch-orders.usecase';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, CoreModule],
+  imports: [DataModule],
+  providers: [FetchOrdersUseCase],
 })
 export class DomainModule {}
