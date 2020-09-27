@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { SignUpRequest } from './../../../domain/vo/request/sign-up';
-import { SignUpUseCase } from './../../../domain/usecases/sign-up.usecase';
+import { SignUpUseCase } from '../../../domain/usecases/sign-up-usecase';
 
 @Component({
   selector: 'app-sign-up',

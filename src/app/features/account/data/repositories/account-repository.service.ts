@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { SignUpRequest, SignInRequest } from '../../domain/vo/request';
 import { Observable } from 'rxjs';
 import { User } from '../../domain/entities/user';
-import { AccountRemoteDataSource } from '../datasources/account-remote.data-source.service';
-import { AccountRepository } from '../../domain/repositories/account.repository';
+import { RemoteDataSource } from '../datasources/remote-data-source.service';
+import { AccountRepository } from '../../domain/repositories/account-repository';
 
 @Injectable()
-export class AccountRepositoryImpl implements AccountRepository {
-  constructor(private remoteDataSource: AccountRemoteDataSource) {}
+export class AccountRepositoryService implements AccountRepository {
+  constructor(private remoteDataSource: RemoteDataSource) {}
 
   signUp(params: SignUpRequest): Observable<User> {
     return this.remoteDataSource.signUp(params);

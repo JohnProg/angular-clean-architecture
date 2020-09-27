@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Usecase } from 'src/app/core/usecases/usecase';
 import { User } from '../entities/user';
 import { SignUpRequest } from '../vo/request/sign-up';
-import { AccountRepository } from '../repositories/account.repository';
+import { AccountRepository } from '../repositories/account-repository';
 
 @Injectable()
 export class SignUpUseCase implements Usecase<User, SignUpRequest> {

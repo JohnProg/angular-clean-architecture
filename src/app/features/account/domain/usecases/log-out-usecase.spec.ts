@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LogOutUseCase } from './log-out.usecase';
+import { LogOutUseCase } from './log-out-usecase';
 
 describe('LogOutUseCase', () => {
   let service: LogOutUseCase;

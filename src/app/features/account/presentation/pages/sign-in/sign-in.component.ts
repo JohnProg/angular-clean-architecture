@@ -1,5 +1,5 @@
 import { SignInRequest } from './../../../domain/vo/request/sign-in';
-import { SignInUseCase } from './../../../domain/usecases/sign-in.usecase';
+import { SignInUseCase } from '../../../domain/usecases/sign-in-usecase';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';

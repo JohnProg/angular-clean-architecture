@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-export abstract class OrderRemoteDataSource {
+export abstract class RemoteDataSource {
   abstract fetchOrders(): Observable<OrderModel[]>;
 }
 
 @Injectable()
-export class OrderRemoteDataSourceImpl implements OrderRemoteDataSource {
+export class RemoteDataSourceService implements RemoteDataSource {
   constructor(private client: HttpClient) {}
 
   fetchOrders(): Observable<OrderModel[]> {

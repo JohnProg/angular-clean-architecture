@@ -1,16 +1,16 @@
-import { UserModel } from './../models/user.model';
+import { UserModel } from '../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-export abstract class AccountRemoteDataSource {
+export abstract class RemoteDataSource {
   abstract signUp(params): Observable<UserModel>;
   abstract signIn(params): Observable<UserModel>;
   abstract logOut(): Observable<boolean>;
 }
 
 @Injectable()
-export class AccountRemoteDataSourceImpl implements AccountRemoteDataSource {
+export class RemoteDataSourceService implements RemoteDataSource {
   constructor(private client: HttpClient) {}
 
   signUp(params: any): Observable<UserModel> {

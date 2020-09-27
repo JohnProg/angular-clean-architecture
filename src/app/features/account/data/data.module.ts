@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
-import { AccountRepository } from '../domain/repositories/account.repository';
+import { AccountRepository } from '../domain/repositories/account-repository';
 import {
-  AccountRemoteDataSource,
-  AccountRemoteDataSourceImpl,
-} from './datasources/account-remote.data-source.service';
-import { AccountRepositoryImpl } from './repositories/account.repository.impl';
+  RemoteDataSource,
+  RemoteDataSourceService,
+} from './datasources/remote-data-source.service';
+import { AccountRepositoryService } from './repositories/account-repository.service';
 
 @NgModule({
   providers: [
-    { provide: AccountRemoteDataSource, useClass: AccountRemoteDataSourceImpl },
-    { provide: AccountRepository, useClass: AccountRepositoryImpl },
+    { provide: RemoteDataSource, useClass: RemoteDataSourceService },
+    { provide: AccountRepository, useClass: AccountRepositoryService },
   ],
 })
 export class DataModule {}

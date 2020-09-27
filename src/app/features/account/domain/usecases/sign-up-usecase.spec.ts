@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { OrderRepositoryImpl } from './order.repository.impl';
+import { SignUpUseCase } from './sign-up-usecase';
 
-describe('OrderRepositoryImpl', () => {
-  let service: OrderRepositoryImpl;
+describe('SignUpUseCase', () => {
+  let service: SignUpUseCase;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(OrderRepositoryImpl);
+    service = TestBed.inject(SignUpUseCase);
   });
 
   it('should be created', () => {

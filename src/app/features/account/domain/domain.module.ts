@@ -1,7 +1,7 @@
-import { LogOutUseCase } from './usecases/log-out.usecase';
+import { LogOutUseCase } from './usecases/log-out-usecase';
 import { NgModule } from '@angular/core';
-import { SignInUseCase } from './usecases/sign-in.usecase';
-import { SignUpUseCase } from './usecases/sign-up.usecase';
+import { SignInUseCase } from './usecases/sign-in-usecase';
+import { SignUpUseCase } from './usecases/sign-up-usecase';
 import { DataModule } from '../data/data.module';
 
 @NgModule({

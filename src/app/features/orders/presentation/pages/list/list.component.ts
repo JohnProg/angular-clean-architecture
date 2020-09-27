@@ -1,5 +1,5 @@
 import { Order } from './../../../domain/entities/order';
-import { FetchOrdersUseCase } from './../../../domain/usecases/fetch-orders.usecase';
+import { FetchOrdersUseCaseService } from '../../../domain/usecases/fetch-orders-usecase.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ListComponent implements OnInit {
   items$: Observable<Order[]>;
-  constructor(private fetchOrdersUseCase: FetchOrdersUseCase) {}
+  constructor(private fetchOrdersUseCase: FetchOrdersUseCaseService) {}
 
   ngOnInit(): void {
     this.initData();

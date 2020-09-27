@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SignUpUseCase } from './sign-up.usecase';
+import { SignInUseCase } from './sign-in-usecase';
 
-describe('SignUpUseCase', () => {
-  let service: SignUpUseCase;
+describe('SignInUseCase', () => {
+  let service: SignInUseCase;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SignUpUseCase);
+    service = TestBed.inject(SignInUseCase);
   });
 
   it('should be created', () => {
